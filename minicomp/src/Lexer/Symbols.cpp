@@ -69,6 +69,8 @@ optional<Keyword> Lexer::keyword_from_str(string_view s) {
     if (s == "for") return { Keyword::FOR };
     if (s == "do") return { Keyword::DO };
     if (s == "in") return { Keyword::IN };
+    if (s == "true") return { Keyword::TRUE };
+    if (s == "false") return { Keyword::FALSE };
     return std::nullopt;
 }
 
@@ -104,6 +106,7 @@ const char* Lexer::keyword_str(const Keyword& k) {
     case Keyword::IMPL: return "impl";
     case Keyword::ENUM: return "enum";
     case Keyword::TRAIT: return "trait";
+    case Keyword::TRUE: return "true";
     case Keyword::SELF: return "self";
     case Keyword::INLINE: return "inline";
     case Keyword::MATCH: return "match";
