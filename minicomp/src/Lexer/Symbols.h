@@ -17,6 +17,7 @@ namespace Lexer {
         STRUCT, U8, U32, U64, F32,
         IMPL, ENUM, TRAIT, SELF,
         INLINE, MATCH, FOR, DO, IN,
+        PUB
     };
 
     std::optional<Keyword> keyword_from_str(std::string_view);

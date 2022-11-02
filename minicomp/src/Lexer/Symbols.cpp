@@ -70,7 +70,7 @@ optional<Keyword> Lexer::keyword_from_str(string_view s) {
     if (s == "do") return { Keyword::DO };
     if (s == "in") return { Keyword::IN };
     if (s == "true") return { Keyword::TRUE };
-    if (s == "false") return { Keyword::FALSE };
+    if (s == "pub") return { Keyword::PUB };
     return std::nullopt;
 }
 
@@ -113,6 +113,7 @@ const char* Lexer::keyword_str(const Keyword& k) {
     case Keyword::FOR: return "for";
     case Keyword::DO: return "do";
     case Keyword::IN: return "in";
+    case Keyword::PUB: return "pub";
     }
     return "!!!UNACCOUNTED FOR KEYWORD IN keyword_str!!!";
 }

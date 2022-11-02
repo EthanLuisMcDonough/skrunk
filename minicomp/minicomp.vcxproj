@@ -82,7 +82,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>$(ProjectDir)src\Lexer;$(ProjectDir)src\Util;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\Lexer;$(ProjectDir)src\Util;$(ProjectDir)src\AST;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -112,7 +112,7 @@
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
-      <AdditionalIncludeDirectories>$(ProjectDir)src\Lexer;$(ProjectDir)src\Util;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(ProjectDir)src\Lexer;$(ProjectDir)src\Util;$(ProjectDir)src\AST;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -136,6 +136,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\AST\ControlFlow.cpp" />
+    <ClCompile Include="src\AST\Declaration.cpp" />
+    <ClCompile Include="src\AST\Literals.cpp" />
+    <ClCompile Include="src\AST\Function.cpp" />
+    <ClCompile Include="src\AST\Node.cpp" />
+    <ClCompile Include="src\AST\Operators.cpp" />
+    <ClCompile Include="src\AST\Program.cpp" />
+    <ClCompile Include="src\AST\RValue.cpp" />
+    <ClCompile Include="src\AST\Type.cpp" />
     <ClCompile Include="src\Lexer\ChPeeker.cpp" />
     <ClCompile Include="src\Lexer\Lex.cpp" />
     <ClCompile Include="src\Lexer\Location.cpp" />
@@ -145,6 +154,15 @@
     <ClCompile Include="src\Util\Peeker.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\AST\Declaration.h" />
+    <ClInclude Include="src\AST\Literals.h" />
+    <ClInclude Include="src\AST\Function.h" />
+    <ClInclude Include="src\AST\Node.h" />
+    <ClInclude Include="src\AST\Operators.h" />
+    <ClInclude Include="src\AST\Program.h" />
+    <ClInclude Include="src\AST\RValue.h" />
+    <ClInclude Include="src\AST\Type.h" />
+    <ClInclude Include="src\AST\ControlFlow.h" />
     <ClInclude Include="src\Lexer\ChPeeker.h" />
     <ClInclude Include="src\Lexer\Lex.h" />
     <ClInclude Include="src\Lexer\Location.h" />
